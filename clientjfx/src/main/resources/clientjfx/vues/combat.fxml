@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #003DBE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientjfx.vues.VueCombat">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nomJoueur" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#jouer" text="OK !" fx:id="jouer">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <Label text="Battle" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+   </top>
+   <right>
+      <VBox fx:id="vBoxImages" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="rien" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/akrien.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pierre" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/akpierre.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ciseaux" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/akciseaux.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="feuille" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/akfeuille.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomAdversaire">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="radioPierre" mnemonicParsing="false" text="Pierre">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioCiseaux" mnemonicParsing="false" text="Ciseaux">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioFeuille" mnemonicParsing="false" text="Feuille">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </RadioButton>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label fx:id="pseudo">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="scorePseudo">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="scoreAlexKidd">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pseudoAdversaire">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+   </left>
+   <opaqueInsets>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </opaqueInsets>
+   <padding>
+      <Insets top="30.0" />
+   </padding>
+</BorderPane>

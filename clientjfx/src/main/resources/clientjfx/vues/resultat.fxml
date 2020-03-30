@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #003DBE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientjfx.vues.VueResultat">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label  fx:id="vainqueur">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label text="a gagné">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" text="Menu" onAction="#menu">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <ImageView fitHeight="232.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@images/AlexKidd.jpg" />
+         </image>
+      </ImageView>
+   </center>
+   <top>
+      <Label text="Résultat" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

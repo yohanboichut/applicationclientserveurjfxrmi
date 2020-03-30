@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #003DBE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientjfx.vues.VueAccueil">
+   <center>
+      <ImageView fitHeight="232.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@images/AlexKidd.jpg" />
+         </image>
+      </ImageView>
+   </center>
+   <top>
+      <Label text="SHIFUMI - Battle" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Pseudo">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pseudo" />
+            <Button fx:id="go" mnemonicParsing="false" text="GO !">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="go1" mnemonicParsing="false" onAction="#rejoindrePartie" text="Rejoindre">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
