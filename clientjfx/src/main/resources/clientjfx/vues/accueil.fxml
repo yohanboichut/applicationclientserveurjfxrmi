@@ -30,7 +30,7 @@
                </font>
             </Label>
             <TextField fx:id="pseudo" />
-            <Button fx:id="go" mnemonicParsing="false" text="GO !">
+            <Button fx:id="go" mnemonicParsing="false" text="Créer !">
                <font>
                   <Font size="25.0" />
                </font>

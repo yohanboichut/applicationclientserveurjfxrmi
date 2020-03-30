@@ -16,7 +16,7 @@
                   <Font size="35.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#jouer" text="OK !" fx:id="jouer">
+            <Button fx:id="jouer" mnemonicParsing="false" onAction="#jouer" text="OK !">
                <font>
                   <Font size="25.0" />
                </font>
@@ -34,6 +34,11 @@
    <right>
       <VBox fx:id="vBoxImages" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
+            <Label fx:id="nomAdversaire">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
             <ImageView fx:id="rien" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/akrien.png" />
@@ -54,11 +59,6 @@
                   <Image url="@images/akfeuille.png" />
                </image>
             </ImageView>
-            <Label fx:id="nomAdversaire">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
          </children>
       </VBox>
    </right>

@@ -225,51 +225,39 @@ public class VueCombat implements Vue {
 
 
     public void attendreChoixAdversaire(int idNumeroOperationCourante) {
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    public void attendreChoixAdversaire(int idNumeroOperationCourante) {
-
         this.jouer.setDisable(true);
         this.vBoxImages.getChildren().remove(imageCourante);
         this.imageCourante = rien;
-        this.vBoxImages.getChildren().add(rien);
-        this.show();
-        Task<Boolean> attendre = new Task<Boolean>() {
+        this.vBoxImages.getChildren().add(this.imageCourante);
+        Task<Boolean> attenteCoup = new Task<Boolean>() {
             @Override
             protected Boolean call() throws Exception {
-                ScoreDTO scoreDTO = null;
+
+                Integer idOperation = null;
                 do {
-                     scoreDTO = controleur.getScore();
-                }
-                while (scoreDTO.getNumeroOperation() == idNumeroOperationCourante);
+                    idOperation = controleur.getScore().getNumeroOperation();
+                } while (idNumeroOperationCourante == idOperation);
                 return true;
             }
         };
-        attendre.addEventFilter(WorkerStateEvent.WORKER_STATE_SUCCEEDED,e ->{controleur.majScore();});
-        Thread thread = new Thread(attendre);
+        attenteCoup.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED,e -> controleur.majScore());
+        Thread thread = new Thread(attenteCoup);
         thread.start();
     }
-     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

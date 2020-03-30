@@ -67,8 +67,17 @@ public class VueAttenteJoueur implements Vue {
     public void chargerDonnees() {
         this.ticket.setText(this.controleur.getToken());
         this.ticket.setDisable(false);
+        Task<Boolean> attenteJoueur = new Task<Boolean>() {
+            @Override
+            protected Boolean call() throws Exception {
+                while (!controleur.partieCommencee());
+                return true;
+            }
+        };
+        attenteJoueur.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED,e -> controleur.goToPartie());
+        Thread thread = new Thread(attenteJoueur);
+        thread.start();
 
-        //TODO
     }
 
 
@@ -78,27 +87,5 @@ public class VueAttenteJoueur implements Vue {
     }
 
 
-
-
-
-
-
-
-    /*    public void chargerDonnees() {
-        this.ticket.setText(this.controleur.getToken());
-        this.ticket.setDisable(false);
-        this.ticket.setOnInputMethodTextChanged(e -> this.ticket.setText(this.controleur.getToken()));
-
-        Task<Boolean> waiting = new Task<Boolean>() {
-            @Override
-            protected Boolean call() throws Exception {
-                while (!controleur.partieCommencee());
-                return true;
-            }
-        };
-        waiting.addEventFilter(WorkerStateEvent.WORKER_STATE_SUCCEEDED,e -> controleur.goToPartie());
-        Thread thread = new Thread(waiting);
-        thread.start();
-    }*/
 
 }
