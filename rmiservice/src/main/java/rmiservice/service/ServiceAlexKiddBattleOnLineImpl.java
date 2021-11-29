@@ -1,6 +1,7 @@
 package rmiservice.service;
 
-import rmiservice.dto.ScoreDTO;
+import interfaces.service.ServiceAlexKiddBattleOnLine;
+import interfaces.dto.ScoreDTO;
 import interfaces.facade.FacadeAlexKiddBattleOnLine;
 import modele.FacadeAlexKiddBattleOnLineImpl;
 import interfaces.exceptions.*;

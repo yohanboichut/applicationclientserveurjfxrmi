@@ -4,5 +4,4 @@ module rmiservice {
     requires interfaces;
     exports rmiservice.application;
     exports rmiservice.service;
-    exports rmiservice.dto;
 }

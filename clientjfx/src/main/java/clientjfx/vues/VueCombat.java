@@ -2,7 +2,6 @@ package clientjfx.vues;
 
 import clientjfx.controleur.Controleur;
 import interfaces.exceptions.ChoixDejaFaitException;
-import interfaces.type.Score;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
@@ -15,7 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import rmiservice.dto.ScoreDTO;
+import interfaces.dto.ScoreDTO;
 
 import java.io.IOException;
 import java.net.URL;

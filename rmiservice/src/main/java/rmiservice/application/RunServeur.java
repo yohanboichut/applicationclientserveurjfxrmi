@@ -1,6 +1,6 @@
 package rmiservice.application;
 
-import rmiservice.service.ServiceAlexKiddBattleOnLine;
+import interfaces.service.ServiceAlexKiddBattleOnLine;
 import rmiservice.service.ServiceAlexKiddBattleOnLineImpl;
 
 import java.net.MalformedURLException;
@@ -8,8 +8,10 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
+import static interfaces.service.ServiceAlexKiddBattleOnLine.RMI_SERVEUR;
+
 public class RunServeur {
-    public static final String RMI_SERVEUR = "rmi://localhost/alexkiddonline";
+
 
     public static void main(String[] args) {
         try {

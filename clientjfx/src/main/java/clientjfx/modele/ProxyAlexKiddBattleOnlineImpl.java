@@ -1,8 +1,7 @@
 package clientjfx.modele;
 
-import rmiservice.application.RunServeur;
-import rmiservice.dto.*;
-import rmiservice.service.ServiceAlexKiddBattleOnLine;
+import interfaces.dto.ScoreDTO;
+import interfaces.service.ServiceAlexKiddBattleOnLine;
 import interfaces.exceptions.*;
 
 import java.net.MalformedURLException;
@@ -18,7 +17,7 @@ public class ProxyAlexKiddBattleOnlineImpl implements ProxyAlexKiddBattleOnline 
     public ProxyAlexKiddBattleOnlineImpl() {
         System.out.println("Lancement du client");
         try {
-             this.serviceAlexKiddBattleOnLine =(ServiceAlexKiddBattleOnLine) Naming.lookup(RunServeur.RMI_SERVEUR);
+             this.serviceAlexKiddBattleOnLine =(ServiceAlexKiddBattleOnLine) Naming.lookup(ServiceAlexKiddBattleOnLine.RMI_SERVEUR);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();

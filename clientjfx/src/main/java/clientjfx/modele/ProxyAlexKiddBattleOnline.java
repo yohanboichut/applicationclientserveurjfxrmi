@@ -1,6 +1,6 @@
 package clientjfx.modele;
 
-import rmiservice.dto.ScoreDTO;
+import interfaces.dto.ScoreDTO;
 import interfaces.exceptions.*;
 
 public interface ProxyAlexKiddBattleOnline {

@@ -1,6 +1,6 @@
 package clientjfx.controleur;
 
-import rmiservice.dto.ScoreDTO;
+import interfaces.dto.ScoreDTO;
 import javafx.stage.Stage;
 import interfaces.exceptions.*;
 import clientjfx.modele.ProxyAlexKiddBattleOnline;
